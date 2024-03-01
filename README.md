@@ -60,4 +60,4 @@ theses step show how to install releate tools.
    Leave a passphrase blank for now.
    
    After success we will have files in folder ./ssh (window on C:/Users/[username]) id_ed25519 and **id_ed25519.pub** which contains our public SSH key
-2. 
+2. Copy client's public key to stored remote

@@ -1,4 +1,5 @@
 # remote-dev-with-vscode (with SSH)
+Prevent my machine hanging, share process to other maching via SSH remote.
 open MyCos session
 
 ![image](./architecture.png)

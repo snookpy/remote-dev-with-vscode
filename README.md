@@ -84,7 +84,20 @@ theses step show how to install releate tools.
 if we work from home but want to remote to lan ip, optional way is connect though MyCos VPN.
 
 ## Wake on Lan
-Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wake on Lan)
+Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wake on Lan).
+But first we need to know our remote mac address
+### Open setting in BIOS
+on remote machine
+
+### Macos, use wakeonlan from Homebrew
+  ```
+  brew install wakeonlan
+  ```
+  then
+  ```
+  wakeonlan 18:31:BF:B8:1F:2B
+  ```
+### Window, 
 
 ## Other remote ways
 this demo just ssh to our local machine, theses still use the similary method connect to differenct types, Container, Linux WSL(window), Cloud coding

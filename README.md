@@ -12,6 +12,7 @@ ref: https://code.visualstudio.com/docs/remote/remote-overview
 ## Limitation
   - Cannot remote visual studio especially, old version 2013, 2017, 2019
   - Cannot ssh to AzureAD local login (maybe can but not deep research yet)
+  - Faster or Convenience over GUI like Team Viewer or Remote Desktop? No, just another way for remote work.
 
 ## Table of Contents
 1. [Pre Installlation](#pre-installlation)

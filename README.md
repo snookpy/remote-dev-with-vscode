@@ -50,6 +50,8 @@ after we stored client's public key in remote, top level step that first client 
 then client send decypt message to server if both side valid now we can ssh to remote without asking password.
 ![image](./SSH_Connection_explained.png)
 
+ref: https://www.jurisic.org/post/2021/11/09/SSH-Public-Key-Authentication
+
 ### Step install for public key auth
 theses step show how to install releate tools.
 1. Create an SSH key pair on **Client**

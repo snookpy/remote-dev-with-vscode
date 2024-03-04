@@ -14,6 +14,14 @@ ref: https://code.visualstudio.com/docs/remote/remote-overview
   - Cannot ssh to AzureAD local login (maybe can but not deep research yet)
 
 ## Table of Contents
+1. [Pre Installlation](#pre-installlation)
+2. [What is SSH?](#what-is-ssh)
+3. [Time to Connect to Remote](#time-to-connect-to-remote)
+4. [Forward Port](#forward-port)
+5. [Public Key Authentication](#public-key-authentication)
+6. [WFH Problem use VPN](#wfh-problem-use-vpn)
+7. [Wake on Lan](#wake-on-lan)
+8. [Other remote ways](#other-remote-ways)
 
 
 ## Pre Installlation
@@ -30,14 +38,22 @@ we need theses tools
 2. Macos - [Enable Remote](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac)
 3. Create a machine user if no user yet (if the codebase need admin user please create user with admin role)
 
-
-## What is SSH?
+## What is SSH
 SSH aka Secure Shell, is a cryptographic network protocol used for secure communication between a client and a server over an unsecured network.
 
 working on Port 22
 - access to remote via cli
 - transfer file between them
 - etc.
+  
+## Time to Connect to Remote
+after we installed tools what we need, now it time to connect to remote via ssh
+open terminal or cmd or powershell then, 
+
+```
+ssh hostusername@domain@hostaddress
+```
+it may prompt for typing password
 
 ## Forward Port
 After we connected remote, then we can forward port from remote to run in our local machine.
@@ -63,3 +79,16 @@ theses step show how to install releate tools.
    
    After success we will have files in folder ./ssh (window on C:/Users/[username]) id_ed25519 and **id_ed25519.pub** which contains our public SSH key
 2. Copy client's public key to stored remote
+
+## WFH Problem use VPN
+if we work from home but want to remote to lan ip, optional way is connect though MyCos VPN.
+
+## Wake on Lan
+Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wake on Lan)
+
+## Other remote ways
+this demo just ssh to our local machine, theses still use the similary method connect to differenct types, Container, Linux WSL(window), Cloud coding
+
+
+
+

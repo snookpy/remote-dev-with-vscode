@@ -1,4 +1,4 @@
-# remote-dev-with-vscode (with SSH)
+# Remote development via Visual Studio Code 🧑‍💻 (with SSH)
 Prevent my machine hanging, share process to other maching via SSH remote.
 open MyCos session
 

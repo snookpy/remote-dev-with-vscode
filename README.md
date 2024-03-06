@@ -119,6 +119,7 @@ Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wa
 But first we need to know our remote mac address
 ### Open setting in BIOS
 on remote machine
+![image](./power-on-by-pci-e.png)
 
 ### Macos, use wakeonlan from Homebrew
   ```

@@ -112,7 +112,7 @@ This demo is conect from Macos(client) to Window(remote)
 ## WFH Problem use VPN
 if we work from home but want to remote to lan ip, optional way is connect though MyCos VPN.
 
-!(image)(./remote.vpn.png)
+![image](./remote.vpn.png)
 
 ## Wake on Lan
 Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wake on Lan).

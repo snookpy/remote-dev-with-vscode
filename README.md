@@ -1,4 +1,4 @@
-# remote-dev-with-vscode (with SSH)
+![remote vpn](https://github.com/snookpy/remote-dev-with-vscode/assets/16642760/5d1aa192-03c9-482f-a95e-450df4eff029)![remote vpn](https://github.com/snookpy/remote-dev-with-vscode/assets/16642760/7e424d6d-5d42-4b62-a134-36cc1387e200)# remote-dev-with-vscode (with SSH)
 Prevent my machine hanging, share process to other maching via SSH remote.
 open MyCos session
 
@@ -7,9 +7,10 @@ open MyCos session
 ref: https://code.visualstudio.com/docs/remote/remote-overview
 
 ## Objective
-  - able to remote dev from macos which use window for complie and codebase.
+  Able to remote dev from macos which use window for complie and codebase.
 
-## Limitation
+## Disclaimer
+  - This is not the best way for remote working.
   - Cannot remote visual studio especially, old version 2013, 2017, 2019
   - Cannot ssh to AzureAD local login (maybe can but not deep research yet)
   - Faster or Convenience over GUI like Team Viewer or Remote Desktop? No, just another way for remote work.
@@ -70,7 +71,8 @@ then client send decypt message to server if both side valid now we can ssh to r
 ref: https://www.jurisic.org/post/2021/11/09/SSH-Public-Key-Authentication
 
 ### Step install for public key auth
-theses step show how to install releate tools.
+This demo is conect from Macos(client) to Window(remote)
+
 1. Create an SSH key pair on **Client**
    If you don't have an SSH key pair, open a bash shell or the command line and type in:
    ```
@@ -79,10 +81,37 @@ theses step show how to install releate tools.
    Leave a passphrase blank for now.
    
    After success we will have files in folder ./ssh (window on C:/Users/[username]) id_ed25519 and **id_ed25519.pub** which contains our public SSH key
-2. Copy client's public key to stored remote
+2. Copy client's public key to stored on remote's ssh file.
+   
+   here script for copying client's public key to remote
+
+  - if remote user is admin;
+
+    copy to C:\ProgramData\ssh\administrators_authorized_keys
+     ```
+      export USER_AT_HOST="nook@192.168.123.84"
+      export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+  
+      ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"C:\\ProgramData\\ssh\"; Add-Content -Force -Path \"C:\\ProgramData\\ssh\\administrators_authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+     ```
+
+  - if remote user is not admin;
+
+    copy to user directory
+    ex. C:\Users\nook\.ssh\authorized_keys
+
+    in window we can(I think) use HOME
+      ```
+      export USER_AT_HOST="nook@DESKTOP-6UVDA6I"
+      export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+
+      ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+      ```
 
 ## WFH Problem use VPN
 if we work from home but want to remote to lan ip, optional way is connect though MyCos VPN.
+
+!(image)(./remote.vpn.png)
 
 ## Wake on Lan
 Saving or prevent remote computer hang, just turn it off and trun on with WoL(Wake on Lan).

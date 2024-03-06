@@ -1,4 +1,4 @@
-![remote vpn](https://github.com/snookpy/remote-dev-with-vscode/assets/16642760/5d1aa192-03c9-482f-a95e-450df4eff029)![remote vpn](https://github.com/snookpy/remote-dev-with-vscode/assets/16642760/7e424d6d-5d42-4b62-a134-36cc1387e200)# remote-dev-with-vscode (with SSH)
+# remote-dev-with-vscode (with SSH)
 Prevent my machine hanging, share process to other maching via SSH remote.
 open MyCos session
 

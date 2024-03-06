@@ -7,7 +7,8 @@ open MyCos session
 ref: https://code.visualstudio.com/docs/remote/remote-overview
 
 ## Objective
-  Able to remote dev from macos which use window for complie and codebase.
+  - Able to remote dev from macos which use window for complie and codebase.
+  - Using other computer compile with my GUI code and forward port to my machine.
 
 ## Disclaimer
   - This is not the best way for remote working.
